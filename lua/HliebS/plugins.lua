@@ -40,6 +40,13 @@ use {
     {'L3MON4D3/LuaSnip'},     -- Required
   }
 }
+local lsp = require('lsp-zero').preset({})
+
+lsp.on_attach(function(client, bufnr)
+  lsp.default_keymaps({buffer = bufnr})
+end)
+
+lsp.setup()
 
 use ( {
     'nvim-treesitter/nvim-treesitter', { run = ':TSUpdate'}
