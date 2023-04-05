@@ -19,7 +19,7 @@ use ( {
 -- or                            , branch = '0.1.x',
   requires = { {'nvim-lua/plenary.nvim'} }
 }
-    
+
 use {
   'VonHeikemen/lsp-zero.nvim',
   branch = 'v2.x',
