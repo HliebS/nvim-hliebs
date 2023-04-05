@@ -54,5 +54,7 @@ use ( {
 
 use('mbbill/undotree')
 use('ThePrimeagen/harpoon')
+use('tpope/vim-fugitive')
+
 use('ThePrimeagen/vim-be-good')
     end)
