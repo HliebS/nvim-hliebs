@@ -2,19 +2,18 @@
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
--- ? : ThePrimeagen
+-- Keymap to move highlighted text up&down as a block : ThePrimeagen
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
--- ? : ThePrimeagen
+-- Keymap to append the line bellow to current one with a space : ThePrimeagen
 vim.keymap.set("n", "J", "mzJ`z")
 
--- Keymaps for navigating the file vertically by half with centering of cursor
--- :ThePrimeagen
+-- Keymaps for centered navigation by half of the window height : ThePrimeagen
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
--- Set keymap for search centering and selection : ThePrimeagen
+-- Set keymaps for centered search & selection : ThePrimeagen
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
@@ -29,7 +28,7 @@ end)
 -- Keymap for multiple pasting of same yank : ThePrimeagen
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
--- ? : asbjornHaland
+-- Keymaps that allow yanking into system clipboard : asbjornHaland, ThePrimeagen
 vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 
@@ -41,7 +40,11 @@ vim.keymap.set("i", "<C-c>", "<Esc>")
 
 -- ? : ThePrimeagen
 vim.keymap.set("n", "Q", "<nop>")
+
+-- Keymap tho switch betwee projects via tmux : ThePrimeagen
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
+
+-- ? : ThePrimeagen
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 
 -- ? : ThePrimeagen
@@ -50,8 +53,10 @@ vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
 vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
 vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
--- ? : ThePrimeagen
+-- Keymap to replace the word under the cursor : ThePrimeagen
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+
+-- Keymap to make the file executable : ThePrimeagen
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 -- ? : ThePrimeagen
