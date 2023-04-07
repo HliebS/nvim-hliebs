@@ -52,9 +52,21 @@ use ( {
     'nvim-treesitter/nvim-treesitter', { run = ':TSUpdate'}
 } )
 
+use {
+  'nvim-lualine/lualine.nvim',
+  requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+}
+
 use('mbbill/undotree')
 use('ThePrimeagen/harpoon')
 use('tpope/vim-fugitive')
+
+use {
+  'lewis6991/gitsigns.nvim',
+  config = function()
+    require('gitsigns').setup()
+  end
+}
 
 use('ThePrimeagen/vim-be-good')
     end)
