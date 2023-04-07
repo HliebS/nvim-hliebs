@@ -1,8 +1,5 @@
 vim.opt.guicursor = ""
 
-vim.opt.lines = 35
-vim.opt.columns = 144
-
 vim.opt.nu = true
 vim.opt.relativenumber = true
 vim.opt.numberwidth = 4
@@ -31,4 +28,4 @@ vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
 
-vim.opt.colorcolumn = "85"
+vim.opt.colorcolumn = "80"
